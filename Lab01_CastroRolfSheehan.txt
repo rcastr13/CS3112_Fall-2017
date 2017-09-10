@@ -1,0 +1,43 @@
+Lab01 Castro, Rolf Sheehan
+
+1. 	--------
+	Problem:
+	--------
+	A - 5 gal.
+	B - 4 gal.
+	Have 2 gal. precisely in B.
+
+	=========
+	SOLUTION:
+	=========
+	FILL(A)		A = 5, B = 0
+	POUR(A, B) 	A = 1, B = 4
+	SPILL(B)	A = 1, B = 0
+	POUR(A, B)	A = 0, B = 1
+	FILL(A)		A = 5, B = 1
+	POUR(A, B)	A = 2, B = 4
+	SPILL(B)	A = 2, B = 0
+	POUR(A)		A = 0, B = 2
+
+2.	--------
+	Problem:
+	--------
+	A - 8 gal.
+	B - 9 gal.
+	Have 3 gal. precisely in A.
+
+	=========
+	SOLUTION:
+	=========
+	1. FILL(B)		A = 0, B = 9
+	2. POUR(B, A)		A = 8, B = 1
+	3. SPILL(A)		A = 0, B = 1
+	4. POUR(B, A)		A = 1, B = 0
+	5. FILL(B)		A = 1, B = 9
+	6. POUR(B, A)		A = 8, B = 2
+	7. SPILL(A)		A = 0, B = 2
+	8. POUR(B, A)		A = 2, B = 0
+	9. FILL(B)		A = 2, B = 9
+	10. POUR(B, A)		A = 8, B = 3
+	11. SPILL(A)		A = 0, B = 3
+	12. POUR(B, A)		A = 3, B = 0

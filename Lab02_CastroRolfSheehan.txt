@@ -1,0 +1,41 @@
+Lab02 Castro, Rolf Sheehan
+
+--------
+Problem:
+--------
+n number of bottles.
+1 of the bottles contain poison.
+But the poison will take effect in a month when ingested.
+This should take, at best, O(log n) to find the poisonous bottle.
+
+=========
+Solution:
+=========
+DIVIDE AND CONQUER
+
+1. Take each bottle and use binary to label each one.
+	eg.
+		1st bottle: 00000001
+		2nd bottle: 00000010
+		3rd bottle: 00000011
+		4th bottle: 00000100
+		5th bottle: 00000101
+		6th bottle: 00000110
+		7th bottle: 00000111
+		8th bottle: 00001000
+		9th bottle: 00001001
+		10th bottle: 00001010
+		11th bottle: 00001011
+		12th bottle: 00001100
+		13th bottle: 00001101
+		14th bottle: 00001110
+		15th bottle: 00001111
+		etc.
+
+2. Next, have 1 person take all bottles that have the digit 1 as the far right end of the binary (eg. 00000001) and take a drop from each and pour into a drink.
+
+3. Have another person take all bottles that have the digit 1 as their second to the far right end of the binary (eg. 00000010) and take a drop from each and pour into a drink.
+
+4. Repeat the process until one person take all bottles that have the digit 1 as the first digit on the far left (eg. 10000000) and take a drop from each and pour into a drink.
+
+5. This whole process will take O(log(n)) to distribute and the next step is to have all persons drink their respective bottles. Once a month passes, the persons dead will provide a unique binary which will be the bottle with the poison in it.
